@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #000;
+    color: #fff;
+}
+
+.header, .body-section{
+    border-bottom: 5px solid #535251;
+}
+
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/background);
+    background-size: cover;
+    background-position: center;
+    padding: 10px 8%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+nav button{
+    border: 0;
+    outline: 0;
+    background: #db0001;
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.language-btn{
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    border: 1px solid #fff;
+    padding: 7px 10px;
+}
+
+.language-btn img{
+    width: 10px;
+    margin-left: 10px;
+}
+
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+
+.header-content h1{
+    font-size: 60px;
+    line-height: 70px;
+    font-weight: 600;
+    max-width: 650px;
+}
+
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+/* .email-signup{
+    background: #fff;
+    border-radius: 4px;
+    align-items: center;
+    margin-top: 30px;
+    display: flex;
+    overflow: hidden;
+} */
+
+.email-signup input{
+    flex: 1;
+    border: 0;
+    outline: 0;
+    margin-left: 20px;
+}
+
+.email-signup button{
+    background: #db0001;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 15px 30px;
+}
+
+
+.body-section{
+
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+
+}
+.left-items h1, .right-items h1{
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.left-items p, .right-items p{
+    font-size: 24px;
+}
+
+.right-items{
+    position: relative;
+    padding-left: 150px;  
+}
+
+.right-items > video{
+    position: absolute;
+    left: 225px;
+    top: 20%;
+    z-index: -1;
+}
+
+.layout{
+    border: 2px solid #535251;
+    border-radius: 10px;
+    background-color: #000;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.layout p{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.layout p span{
+    color: blue;
+    font-size: 18px;
+}
+
+.layout img{
+    width: 50px;
+}
+
+.static-left-items{
+    position: relative;
+}
+
+.faq-container{
+    padding: 40px 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-container > h1{
+    font-size: 50px;
+}
+
+.accordion{
+    margin: 60px auto;
+    width: 100%;
+    max-width: 750px;
+}
+
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+label::after{
+    content: '+';
+    font-size: 34px;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+
+input[type="radio"]{
+    display: none;
+}
+
+.accordion .content{
+    background: #303030;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+
+}
+
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+}
+
+.faq .email-signup{
+    max-width: 600px;
+    margin: 20px auto 60px;
+}
+
+
+.footer{
+    max-width: 70%;
+    margin: 1rem auto;
+    overflow: auto;
+}
+
+
+.footer, 
+.footer a{
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer p{
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.footer .footer-cols{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+}
+
+.footer li{
+    line-height: 2.4;
+}
+
+.footer .language-btn{
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.copyright-txt{
+    font-size: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
